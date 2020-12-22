@@ -1,13 +1,12 @@
-import { getPostsByCat } from '../lib/api'
-import { getShows } from '../lib/api'
+import { getEvents } from '../lib/api'
 
-export default function Contact({allPosts: {edges}},spinData) {
+export default function Contact({allEvents: {edges}}) {
   const first = edges[0]?.node
-  const morePosts = edges.slice(1)
   return (
   <div>
     <h1>{first.title}</h1>
     <h1>{first.content}</h1>
+
     <img src={first.featuredImage.node.sourceUrl} />
 
     <h1>{morePosts[0].node.title}</h1>
@@ -18,14 +17,10 @@ export default function Contact({allPosts: {edges}},spinData) {
 }
 
 export async function getStaticProps() {
-  const allPosts = await getPostsByCat("blog-article",5)
-  const spinData = await getShows()
-
+  const allEvents = await getEvents()
   return {
     props: {
-    allPosts,
-    spinData
+    allEvents
     }
   }
-
 }
