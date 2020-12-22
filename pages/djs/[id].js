@@ -12,7 +12,7 @@ export default function Persona({ persona }) {
   return (
   <div>
   <img src={persona?.image} />
-    <h1> {persona?.name} </h1>
+    <h1> {persona?.title} </h1>
     <div dangerouslySetInnerHTML={{ __html: persona?.bio }} />
 
 </div>
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
   var statement = ""
   for (var i = 0; i < allPersonas.items.length; i++) {
     statement = `/dj/${allPersonas.items[i].id}`
-    personaPaths.push({ params: { id: statement} })
+    personaPaths.push({ params: { id: statement} } || [])
   }
   return {
     paths: personaPaths,

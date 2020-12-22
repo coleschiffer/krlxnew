@@ -36,7 +36,7 @@ export async function getStaticPaths() {
   var statement = ""
   for (var i = 0; i < allShows.items.length; i++) {
     statement = `/shows/${allShows.items[i].id}`
-    showPaths.push({ params: { id: statement} })
+    showPaths.push({ params: { id: statement} } || [])
   }
   return {
     paths: showPaths,
