@@ -1,6 +1,6 @@
 import { getEvents } from '../lib/api'
 
-export default function Contact({allEvents: {edges}}) {
+export default function Events({allEvents: {edges}}) {
   const first = edges[0]?.node
   return (
   <div>

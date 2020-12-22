@@ -12,7 +12,7 @@ export default function Persona({ persona }) {
   return (
   <div>
   <img src={persona?.image} />
-    <h1> {persona?.title} </h1>
+    <h1> {persona?.name} </h1>
     <div dangerouslySetInnerHTML={{ __html: persona?.bio }} />
 
 </div>
