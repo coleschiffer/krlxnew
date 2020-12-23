@@ -35,7 +35,7 @@ export async function getStaticPaths() {
   const personaPaths = []
   var statement = ""
   for (var i = 0; i < allPersonas.items.length; i++) {
-    statement = `/dj/${allPersonas.items[i].id}`
+    statement = `/personas/${allPersonas.items[i].id}`
     personaPaths.push({ params: { id: statement} } || [])
   }
   return {
