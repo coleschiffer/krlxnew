@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router'
+import { useRouter, Link } from 'next/router'
 import ErrorPage from 'next/error'
-import { getShows, getShowByID } from '../../lib/api'
-
-export default function Show({ show }) {
+import { getShows, getShowByID, getPersonasByShow } from '../../lib/api'
+import ShowPersonas from '../../components/showPersonas'
+export default function Show({ show, djs }) {
   const router = useRouter();
   console.log(show)
   if (!router.isFallback && !show?.id) {
@@ -14,17 +14,23 @@ export default function Show({ show }) {
   <img src={show?.image} />
     <h1> {show?.title} </h1>
     <div dangerouslySetInnerHTML={{ __html: show?.description }} />
-
+    <ShowPersonas
+      name={djs?.name}
+      id={djs?.id}
+      autoDJ={djs?.autoDJ}
+    />
 </div>
   )
 }
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getShowByID(params.id, preview, previewData)
+  const persona = await getPersonasByShow(data)
   return {
     props: {
       preview,
       show: data,
+      djs: persona,
     },
   }
 }
