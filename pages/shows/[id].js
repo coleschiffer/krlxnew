@@ -21,7 +21,6 @@ export default function Show({ show }) {
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getShowByID(params.id, preview, previewData)
-
   return {
     props: {
       preview,
