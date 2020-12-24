@@ -7,12 +7,14 @@ export default function Show({ show, djs }) {
   if (!router.isFallback && !show?.id) {
     return <ErrorPage statusCode={404} />
   }
-
+  if (router.isFallback) {
+    // your loading indicator
+    return <div>loading...</div>
+  }
   return (
   <div>
   <img src={show?.image} />
     <h1> {show?.title} </h1>
-    <div dangerouslySetInnerHTML={{ __html: show?.description }} />
     <ShowPersonas
       name={djs?.name}
       id={djs?.id}
