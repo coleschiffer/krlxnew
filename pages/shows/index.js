@@ -2,9 +2,12 @@ import { useRouter, Link } from 'next/router'
 import ErrorPage from 'next/error'
 import { getShows} from '../../lib/api'
 import AlphShows from '../../components/allShowsAlph'
+import FeaturesHeader from '../../components/features'
+
 export default function listOfShows({ items }) {
   return (
   <div>
+  <FeaturesHeader />
     <AlphShows
       items={items}
     />
