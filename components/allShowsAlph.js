@@ -1,4 +1,3 @@
-import {dynamicSort} from '../lib/api'
 import ShowItem from '../components/showItem'
 export default function AlphShows({ items }) {
   const allShows = items.sort(

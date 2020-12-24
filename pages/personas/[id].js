@@ -2,9 +2,10 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import { getPersonas, getPersonaByID, getShowByID } from '../../lib/api'
 import Link from 'next/link'
+import ShowItem from '../../components/showItem'
 
 export default function Persona({ persona, her }) {
-  const router = useRouter();
+  const router = useRouter()
   console.log(her)
   if (!router.isFallback && !persona?.id) {
     return <ErrorPage statusCode={404} />
@@ -15,9 +16,13 @@ export default function Persona({ persona, her }) {
     <h1> {persona?.name} </h1>
     <div dangerouslySetInnerHTML={{ __html: persona?.bio }} />
     <h1>Shows:</h1>
-    <Link as={`/shows/${her?.id}`} href="/shows/[id]">
-      <a className="hover:underline">{her?.title}</a>
-    </Link>
+    <ShowItem
+      title={her?.title}
+      id={her?.id}
+      image={her?.image}
+      startTime={her?.start}
+      endTime={her?.end}
+    />
 </div>
   )
 }
