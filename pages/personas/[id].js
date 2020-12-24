@@ -29,7 +29,10 @@ export default function Persona({ persona, her }) {
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPersonaByID(params.id, preview, previewData)
-  const show = await getShowByID(data?._links.shows[data?._links.shows.length-1].href.substring(32))
+  var show = null
+  if(data?._links.shows.length>0) {
+    show = await getShowByID(data?._links.shows[data?._links.shows.length-1].href.substring(32))
+  }
   return {
     props: {
       preview,

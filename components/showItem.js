@@ -21,28 +21,31 @@ export default function ShowItem({
   var date = GetDayOfWeek(startTime?.substring(0,10))
   startTime = CleanTime(startTime?.substring(11,16))
   endTime = CleanTime(endTime?.substring(11,16))
-  return (
-    <div>
-      <h3 className="text-3xl mb-3 leading-snug inline">
-      <img
-      src={image}
-      className="w-12 h-12 rounded-full mr-4"
-      alt={title}
-      />
-        <Link as={`/shows/${id}`} href="/shows/[id]">
-          <a
-            className="hover:underline"
-            dangerouslySetInnerHTML={{ __html: title }}
-          ></a>
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        {date} {startTime}––{endTime}
-      </div>
-      <div className="text-lg leading-relaxed mb-4">
-      {dj}
-      </div>
+  if(id) {
+    return (
+      <div>
+        <h3 className="text-3xl mb-3 leading-snug inline">
 
-  </div>
-  )
+        <img
+        src={image}
+        className="w-12 h-12 rounded-full mr-4"
+        />
+          <Link as={`/shows/${id}`} href="/shows/[id]">
+            <a
+              className="hover:underline"
+              dangerouslySetInnerHTML={{ __html: title }}
+            ></a>
+          </Link>
+        </h3>
+        <div className="text-lg mb-4">
+          {date} {startTime} {endTime}
+        </div>
+        <div className="text-lg leading-relaxed mb-4">
+        {dj}
+        </div>
+
+    </div>
+    )
+  }
+  return ("")
 }

@@ -4,7 +4,6 @@ import { getShows, getShowByID, getPersonasByShow } from '../../lib/api'
 import ShowPersonas from '../../components/showPersonas'
 export default function Show({ show, djs }) {
   const router = useRouter();
-  console.log(show)
   if (!router.isFallback && !show?.id) {
     return <ErrorPage statusCode={404} />
   }
