@@ -9,7 +9,15 @@
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
+.blink {
+  animation: blink 1s linear infinite;
+}
 
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 /* Your own custom utilities */
 
 .has-text-align-left {

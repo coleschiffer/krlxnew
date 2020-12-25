@@ -1,6 +1,5 @@
 import ShowItem from '../components/showItem'
 export default function GetShowsByDay({ shows, day }) {
-  console.log(shows)
   const allShows = shows?.items.sort(function(a,b){
   // Turn your strings into dates, and then subtract them
   // to get a value that is either negative, positive, or zero.

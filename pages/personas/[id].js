@@ -3,17 +3,19 @@ import ErrorPage from 'next/error'
 import { getPersonas, getPersonaByID, getShows } from '../../lib/api'
 import Link from 'next/link'
 import PersonaShowItems from '../../components/personaShowItems'
+import SideBar from "../../components/sideBar"
+
 export default function Persona({ persona, allShows }) {
   const router = useRouter()
-  if (router.isFallback) {
-    // your loading indicator
-    return <div>loading...</div>
-  }
   if (!router.isFallback && !persona?.id) {
     return <ErrorPage statusCode={404} />
   }
   return (
-  <div>
+    <div className="flex mb-4">
+    <div className="w-full md:w-1/5">
+      <SideBar />
+    </div>
+  <div className="p-4 w-full md:w-4/5">
   <h1 className="text-2xl">{persona?.name}</h1>
   <img
   src={persona?.image}
@@ -25,6 +27,8 @@ export default function Persona({ persona, allShows }) {
         persona={persona}
     />
 </div>
+</div>
+
   )
 }
 export async function getStaticProps({ params, preview = false, previewData }) {

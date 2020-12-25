@@ -10,9 +10,9 @@ var selectPersonas = []
     }
   }
 var showPersonas = []
-for (var i = 0; i < allPersonas.items.length; i++) {
-  if(selectPersonas.indexOf(allPersonas.items[i].id)!==-1) {
-    showPersonas.push(allPersonas.items[i])
+for (var i = 0; i < allPersonas?.items.length; i++) {
+  if(selectPersonas.indexOf(allPersonas?.items[i].id)!==-1) {
+    showPersonas.push(allPersonas?.items[i])
   }
 }
 if(showPersonas.length>0){

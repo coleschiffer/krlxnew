@@ -1,4 +1,5 @@
 import { getPageByUri } from '../lib/api'
+import SideBar from "../components/sideBar"
 
 export default function Contact({data}) {
   return (

@@ -3,18 +3,19 @@ import ErrorPage from 'next/error'
 import { getShows, getShowByID, getPersonas } from '../../lib/api'
 import ShowPersonas from '../../components/showPersonas'
 import ShowTime from '../../components/showTime'
+import SideBar from "../../components/sideBar"
 
 export default function Show({ show, allPersonas }) {
   const router = useRouter();
   if (!router.isFallback && !show?.id) {
     return <ErrorPage statusCode={404} />
   }
-  if (router.isFallback) {
-    // your loading indicator
-    return <div>loading...</div>
-  }
   return (
-  <div>
+    <div className="flex mb-4">
+    <div className="w-full md:w-1/5">
+      <SideBar />
+    </div>
+  <div className="p-4 w-full md:w-4/5" >
   <h1 className="text-2xl">{show?.title}</h1>
   <img
   src={show?.image}
@@ -31,6 +32,8 @@ export default function Show({ show, allPersonas }) {
       allPersonas={allPersonas}
     />
 </div>
+</div>
+
   )
 }
 export async function getStaticProps({ params}) {

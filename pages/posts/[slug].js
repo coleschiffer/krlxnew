@@ -12,6 +12,7 @@ import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import Tags from '../../components/tags'
+import SideBar from "../../components/sideBar"
 
 export default function Post({ post, posts, preview }) {
   const router = useRouter()
@@ -22,6 +23,10 @@ export default function Post({ post, posts, preview }) {
   }
 
   return (
+    <div className="flex mb-4">
+    <div className="w-full md:w-1/5">
+      <SideBar />
+    </div>
     <Layout preview={preview}>
       <Container>
         <Header />
@@ -58,6 +63,7 @@ export default function Post({ post, posts, preview }) {
         )}
       </Container>
     </Layout>
+    </div>
   )
 }
 

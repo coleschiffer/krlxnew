@@ -1,12 +1,19 @@
 import Link from 'next/link'
-
-export default function Header() {
+import TopPlayer from '../components/topPlayer'
+export default function Header(shows) {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/">
-        <a className="hover:underline">Blog</a>
-      </Link>
-      .
-    </h2>
+    <div className="flex mb-4 h-auto border-2 border-black">
+      <div className="w-full md:w-1/5">
+      <div className="pl-4 content-center">
+        <div className="text-xl">Welcome to</div>
+        <div className="text-2xl">KRLX.ORG</div>
+        </div>
+      </div>
+      <div className="w-full md:w-4/5">
+      <TopPlayer
+        shows={shows}
+      />
+      </div>
+    </div>
   )
 }
