@@ -19,6 +19,8 @@ export default function AlphShows({ items }) {
             id={item?.id}
             startTime={item?.start}
             endTime={item?.end}
+            description={item?.description}
+            oneTime={item?.one_off}
           />
       ))}
       </div>

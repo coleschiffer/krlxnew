@@ -1,22 +1,35 @@
-import Link from 'next/link'
-
+import ShowPersona from '../components/showPersona'
 export default function ShowPersonas({
-  name,
-  id,
-  autoDJ,
-}) {
-  if(!autoDJ) {
-    return (
-      <Link as={`/personas/${id}`} href="/personas/[id]">
-        <a
-          className="hover:underline"
-          dangerouslySetInnerHTML={{ __html: name }}
-        ></a>
-      </Link>
-    )
+  allPersonas,
+  show,
+}){
+var selectPersonas = []
+  for (var i = 0; i < show?._links.personas?.length; i++) {
+    if(148107!==parseInt(show?._links.personas[i].href.substring(35))) {
+      selectPersonas.push(parseInt(show?._links.personas[i].href.substring(35)))
+    }
   }
-  return (
-      <h3 className="text-3xl mb-3 leading-snug" dangerouslySetInnerHTML={{ __html: name }}>
-      </h3>
-  )
+var showPersonas = []
+for (var i = 0; i < allPersonas.items.length; i++) {
+  if(selectPersonas.indexOf(allPersonas.items[i].id)!==-1) {
+    showPersonas.push(allPersonas.items[i])
+  }
+}
+if(showPersonas.length>0){
+  return(
+  <div>
+    {showPersonas.map((item) => (
+      <ShowPersona
+        name={item?.name}
+        id={item?.id}
+        image={item?.image}
+        bio={item?.bio}
+      />
+  ))}
+  </div>
+)
+}
+return(<h4 className="text-l">
+    Looking to edit your show page? Create a Spinitron Account to edit your show page.
+    </h4>)
 }

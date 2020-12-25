@@ -1,8 +1,10 @@
 import { useRouter, Link } from 'next/router'
 import ErrorPage from 'next/error'
-import { getShows, getShowByID, getPersonasByShow } from '../../lib/api'
+import { getShows, getShowByID, getPersonas } from '../../lib/api'
 import ShowPersonas from '../../components/showPersonas'
-export default function Show({ show, djs }) {
+import ShowTime from '../../components/showTime'
+
+export default function Show({ show, allPersonas }) {
   const router = useRouter();
   if (!router.isFallback && !show?.id) {
     return <ErrorPage statusCode={404} />
@@ -13,25 +15,32 @@ export default function Show({ show, djs }) {
   }
   return (
   <div>
-  <img src={show?.image} />
-    <h1> {show?.title} </h1>
+  <h1 className="text-2xl">{show?.title}</h1>
+  <img
+  src={show?.image}
+  />
+  <ShowTime
+    startTime={show?.start}
+    endTime={show?.end}
+    oneTime={show?.one_off}
+    showDayOfWeek={true}
+  />
+  <h1 className="text-xl" dangerouslySetInnerHTML={{ __html: show?.description }}></h1>
     <ShowPersonas
-      name={djs?.name}
-      id={djs?.id}
-      autoDJ={djs?.autoDJ}
+      show={show}
+      allPersonas={allPersonas}
     />
 </div>
   )
 }
 
-export async function getStaticProps({ params, preview = false, previewData }) {
-  const data = await getShowByID(params.id, preview, previewData)
-  const persona = await getPersonasByShow(data)
+export async function getStaticProps({ params}) {
+  const data = await getShowByID(params.id)
+  const allPersonas = await getPersonas()
   return {
     props: {
-      preview,
       show: data,
-      djs: persona,
+      allPersonas,
     },
   }
 }
