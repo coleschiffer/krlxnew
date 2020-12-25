@@ -13,6 +13,7 @@ export default function ShowItem({
   showDayOfWeek=true,
   showDate=false,
   showTimeZone=false,
+  s=true
 }){
   if(id) {
     return (
@@ -34,7 +35,8 @@ export default function ShowItem({
           oneTime={oneTime}
           showDayOfWeek={showDayOfWeek}
           showDate={showDate}
-          showTimeZone={false}
+          showTimeZone={showTimeZone}
+          s={s}
           />
           </h2>
         <h4 dangerouslySetInnerHTML={{ __html: description }} >

@@ -6,8 +6,10 @@ export default function ShowTime({
   showDate,
   showTimeZone=false,
   oneTime=false,
+  s,
 }){
   var days = ['Sundays', 'Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays'];
+  var dayz = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   var localStartTime = new Date(startTime)
   var localEndTime = new Date(endTime).toString()
   function tConvert (time) {
@@ -22,8 +24,14 @@ export default function ShowTime({
     return time.join (''); // return adjusted time or original string
   }
   var date = " "
+
   if(showDayOfWeek){
-    date = days[localStartTime.getDay()] + date
+    if(s) {
+      date = days[localStartTime.getDay()] + date
+    }
+    else{
+      date = dayz[localStartTime.getDay()] + date
+    }
   }
   localStartTime = localStartTime.toString()
   if(oneTime) {

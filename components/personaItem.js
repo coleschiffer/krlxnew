@@ -6,7 +6,7 @@ name,
 }){
   if(id) {
     return (
-      <div className="pt-2">
+      <div className="pt-2" key={id}>
         <img
         src={image}
         className="w-12 h-12 rounded-full inline-block mr-3"

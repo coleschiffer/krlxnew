@@ -20,6 +20,7 @@ if(selectShows.length>0){
   return(
   <div>
     {personaShows.map((item) => (
+      <div key={item.id}>
       <ShowItem
         title={item?.title}
         id={item?.id}
@@ -28,6 +29,7 @@ if(selectShows.length>0){
         endTime={item?.end}
         oneTime={item?.one_off}
       />
+      </div>
   ))}
   </div>
 )

@@ -10,11 +10,13 @@ export default function AlphaPersonas({ items }) {
   return (
       <div>
         {allPersonas.map((item ) => (
+          <div key={item.id}>
           <PersonaItem
             name={item?.name}
             image={item?.image}
             id={item?.id}
           />
+          </div>
       ))}
       </div>
   )

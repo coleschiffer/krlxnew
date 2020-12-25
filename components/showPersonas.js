@@ -19,12 +19,13 @@ if(showPersonas.length>0){
   return(
   <div>
     {showPersonas.map((item) => (
+      <div key={item.id}>
       <ShowPersona
         name={item?.name}
         id={item?.id}
         image={item?.image}
         bio={item?.bio}
-      />
+      /> </div>
   ))}
   </div>
 )

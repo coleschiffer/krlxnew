@@ -1,12 +1,12 @@
 import ShowItem from '../components/showItem'
-export default function AlphShows({ items }) {
-  const allShows = items.sort(
-  function(a, b) {
-    if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
-    if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
-    return 0;
-  }
-);
+export default function GetShowsByDay({ shows, day }) {
+  console.log(shows)
+  const allShows = shows?.items.sort(function(a,b){
+  // Turn your strings into dates, and then subtract them
+  // to get a value that is either negative, positive, or zero.
+  return new Date(a.start) - new Date(b.start);
+});
+if(allShows) {
   return (
       <div>
         {allShows.map((item ) =>
@@ -20,9 +20,13 @@ export default function AlphShows({ items }) {
             endTime={item?.end}
             description={item?.description}
             oneTime={item?.one_off}
+            s={false}
+            showDate={true}
           />
           </div>
       )}
       </div>
   )
+}
+return ("")
 }
