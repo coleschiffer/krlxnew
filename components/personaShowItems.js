@@ -8,11 +8,14 @@ var selectShows = []
     selectShows.push(parseInt(persona?._links.shows[i].href.substring(32)))
   }
 var personaShows = []
-for (var i = 0; i < allShows.items.length; i++) {
-  if(selectShows.indexOf(allShows.items[i].id)!==-1) {
-    personaShows.push(allShows.items[i])
+if(allShows) {
+  for (var i = 0; i < allShows.items.length; i++) {
+    if(selectShows.indexOf(allShows.items[i].id)!==-1) {
+      personaShows.push(allShows.items[i])
+    }
   }
 }
+
 if(selectShows.length>0){
   return(
   <div>

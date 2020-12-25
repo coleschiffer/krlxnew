@@ -21,6 +21,6 @@ atempt to showcase our soul</h1>
 export async function getStaticProps() {
   const allShows = await getShows()
   return {
-    props: { allShows },
+    props: { show: allShows },
   }
 }

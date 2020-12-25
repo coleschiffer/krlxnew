@@ -33,7 +33,6 @@ export default function Show({ show, allPersonas }) {
 </div>
   )
 }
-
 export async function getStaticProps({ params}) {
   const data = await getShowByID(params.id)
   const allPersonas = await getPersonas()

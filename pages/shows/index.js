@@ -19,7 +19,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
   return {
     props: {
       preview,
-      items: allShows.items,
+      items: allShows?.items,
     },
   }
 }

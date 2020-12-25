@@ -22,19 +22,17 @@ export default function Persona({ persona, allShows }) {
     <h1>Shows:</h1>
     <PersonaShowItems
       allShows={allShows}
-      persona={persona}
+        persona={persona}
     />
 </div>
   )
 }
-
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPersonaByID(params.id, preview, previewData)
   var show = null
   if(data?._links.shows.length>0) {
     show = await getShows()
   }
-  data?._links.shows[data?._links.shows.length-1].href.substring(32)
   return {
     props: {
       preview,
@@ -48,10 +46,10 @@ export async function getStaticPaths() {
   const allPersonas = await getPersonas()
   const personaPaths = []
   var statement = ""
-  for (var i = 0; i < allPersonas.items.length; i++) {
-    statement = `/personas/${allPersonas.items[i].id}`
-    personaPaths.push({ params: { id: statement} } || [])
-  }
+  for (var i = 0; i < allPersonas?.items.length; i++) {
+      statement = `/personas/${allPersonas.items[i].id}`
+      personaPaths.push({ params: { id: statement} } || [])
+    }
   return {
     paths: personaPaths,
     fallback: true,

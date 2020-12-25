@@ -18,7 +18,7 @@ export async function getStaticProps({}) {
   const allPersonas = await getPersonas()
   return {
     props: {
-      items: allPersonas.items,
+      items: allPersonas?.items,
     },
   }
 }
