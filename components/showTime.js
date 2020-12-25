@@ -8,8 +8,11 @@ export default function ShowTime({
   oneTime=false,
   s,
 }){
+  var d = startTime
   var days = ['Sundays', 'Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays'];
   var dayz = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  startTime = startTime.substring(0,startTime.indexOf("+"))+".000Z"
+  endTime = endTime.substring(0,endTime.indexOf("+"))+".000Z"
   var localStartTime = new Date(startTime)
   var localEndTime = new Date(endTime).toString()
   function tConvert (time) {
