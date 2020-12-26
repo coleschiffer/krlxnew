@@ -1,11 +1,11 @@
 import { useRouter, Link } from 'next/router'
 import ErrorPage from 'next/error'
-import { getShows, getShowByID, getPersonas } from '../../lib/api'
+import { getShows, getShowByID, getPersonas, getPageByUri } from '../../lib/api'
 import ShowPersonas from '../../components/showPersonas'
 import ShowTime from '../../components/showTime'
 import SideBar from "../../components/sideBar"
 
-export default function Show({ show, allPersonas }) {
+export default function Show({ show, allPersonas, sidePage}) {
   const router = useRouter();
   if (!router.isFallback && !show?.id) {
     return <ErrorPage statusCode={404} />
@@ -13,7 +13,7 @@ export default function Show({ show, allPersonas }) {
   return (
     <div className="flex mb-4">
     <div className="w-full md:w-1/5">
-      <SideBar />
+      <SideBar data={sidePage} />
     </div>
   <div className="p-4 w-full md:w-4/5" >
   <h1 className="text-2xl">{show?.title}</h1>
@@ -39,10 +39,13 @@ export default function Show({ show, allPersonas }) {
 export async function getStaticProps({ params}) {
   const data = await getShowByID(params.id)
   const allPersonas = await getPersonas()
+  const sidePage = await getPageByUri("/side-bar/")
+
   return {
     props: {
       show: data,
       allPersonas,
+      sidePage,
     },
   }
 }

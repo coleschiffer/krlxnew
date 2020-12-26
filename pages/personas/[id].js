@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import { getPersonas, getPersonaByID, getShows } from '../../lib/api'
+import { getPersonas, getPersonaByID, getShows,getPageByUri } from '../../lib/api'
 import Link from 'next/link'
 import PersonaShowItems from '../../components/personaShowItems'
 import SideBar from "../../components/sideBar"
 
-export default function Persona({ persona, allShows }) {
+export default function Persona({ persona, allShows, sidePage }) {
   const router = useRouter()
   if (!router.isFallback && !persona?.id) {
     return <ErrorPage statusCode={404} />
@@ -13,7 +13,7 @@ export default function Persona({ persona, allShows }) {
   return (
     <div className="flex mb-4">
     <div className="w-full md:w-1/5">
-      <SideBar />
+      <SideBar data={sidePage}/>
     </div>
   <div className="p-4 w-full md:w-4/5">
   <h1 className="text-2xl">{persona?.name}</h1>
@@ -33,6 +33,7 @@ export default function Persona({ persona, allShows }) {
 }
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPersonaByID(params.id, preview, previewData)
+  const sidePage = await getPageByUri("/side-bar/")
   var show = null
   if(data?._links.shows.length>0) {
     show = await getShows()
@@ -42,12 +43,14 @@ export async function getStaticProps({ params, preview = false, previewData }) {
       preview,
       persona: data,
       allShows: show,
+      sidePage
     },
   }
 }
 
 export async function getStaticPaths() {
   const allPersonas = await getPersonas()
+
   const personaPaths = []
   var statement = ""
   for (var i = 0; i < allPersonas?.items.length; i++) {

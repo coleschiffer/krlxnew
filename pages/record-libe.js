@@ -1,11 +1,11 @@
 import { getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 import AboutHeader from "../components/about"
-export default function Contact({data, sidePage}) {
+export default function RecordLibe({data, sidePage}) {
   return (
     <div className="flex mb-4">
     <div className="w-full md:w-1/5">
-    <SideBar data={sidePage}/>
+    <SideBar/>
     </div>
   <div className="p-4 w-full md:w-4/5">
         <AboutHeader />
@@ -17,7 +17,7 @@ export default function Contact({data, sidePage}) {
 }
 
 export async function getStaticProps() {
-  const data = await getPageByUri("/contact/")
+  const data = await getPageByUri("/record-libe/")
   const sidePage = await getPageByUri("/side-bar/")
 
   return {

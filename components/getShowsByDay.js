@@ -22,7 +22,7 @@ if(allShows) {
             s={false}
             showDate={true}
           />
-          </div>
+        </div>
       )}
       </div>
   )

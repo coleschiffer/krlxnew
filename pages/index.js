@@ -1,17 +1,16 @@
 import Head from 'next/head'
 import Container from '../components/container'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
 import CurrentShow from '../components/layout'
-import { getShows } from '../lib/api'
+import { getShows, getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 
-export default function Index({ show }) {
+export default function Index({ show,sidePage }) {
 
   return (
     <div className="flex mb-4">
     <div className="w-full md:w-1/5">
-      <SideBar />
+      <SideBar data={sidePage}/>
     </div>
     <div className="w-full md:w-4/5 p-4">
     <h1>Welcome to our new website!!!! <br/>
@@ -24,8 +23,9 @@ atempt to showcase our soul</h1>
 }
 
 export async function getStaticProps() {
+  const sidePage = await getPageByUri("/side-bar/")
   const allShows = await getShows()
   return {
-    props: { show: allShows },
+    props: { show: allShows, sidePage},
   }
 }

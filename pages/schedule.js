@@ -1,10 +1,10 @@
 import { useRouter, Link } from 'next/router'
 import ErrorPage from 'next/error'
-import { getShows } from '../lib/api'
+import { getShows,getPageByUri } from '../lib/api'
 import GetShowsByDay from '../components/getShowsByDay'
 import SideBar from "../components/sideBar"
 
-export default function Schedule({ shows }) {
+export default function Schedule({ shows, sidePage }) {
   const router = useRouter();
 
   var d = new Date()
@@ -26,9 +26,12 @@ export default function Schedule({ shows }) {
 }
 export async function getStaticProps({ params }) {
   const shows = await getShows()
+  const sidePage = await getPageByUri("/side-bar/")
+
   return {
     props: {
-      shows
+      shows,
+      sidePage
     },
   }
 }

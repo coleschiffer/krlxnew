@@ -1,7 +1,7 @@
 import { getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 import AboutHeader from "../components/about"
-export default function Contact({data, sidePage}) {
+export default function About({data,sidePage}) {
   return (
     <div className="flex mb-4">
     <div className="w-full md:w-1/5">
@@ -17,7 +17,7 @@ export default function Contact({data, sidePage}) {
 }
 
 export async function getStaticProps() {
-  const data = await getPageByUri("/contact/")
+  const data = await getPageByUri("/about/")
   const sidePage = await getPageByUri("/side-bar/")
 
   return {
