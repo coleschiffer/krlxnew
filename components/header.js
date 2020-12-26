@@ -8,7 +8,7 @@ export default function Header(shows) {
         <div className="text-2xl text-center">KRLX.ORG</div>
       </div>
       <div className="col-span-4 md:col-span-3">
-      <TopPlayer
+    <TopPlayer
         shows={shows}
       />
       </div>

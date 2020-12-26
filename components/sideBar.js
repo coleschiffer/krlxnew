@@ -41,6 +41,12 @@ data = data.data
         >About</a>
       </Link>
       </div>
+      <div><Link as={`https://instagram.com/krlxfm`} href="https://instagram.com/krlxfm">
+        <a
+          className="text-2xl pt-4 underline hover:no-underline"
+        >@krlxfm</a>
+      </Link>
+      </div>
       <div>
         <Link as={`/public-file`} href="/public-file">
           <a
