@@ -11,11 +11,11 @@ export default function Show({ show, allPersonas, sidePage}) {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <div className="flex mb-4">
-    <div className="w-full md:w-1/5">
+    <div className="grid grid-cols-4 gap-4">
+    <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage} />
     </div>
-  <div className="p-4 w-full md:w-4/5" >
+  <div className="col-span-4 md:col-span-3 p-3" >
   <h1 className="text-2xl">{show?.title}</h1>
   <img
   src={show?.image}

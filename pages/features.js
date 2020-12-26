@@ -5,11 +5,11 @@ import SideBar from "../components/sideBar"
 
 export default function Features({data}) {
   return (
-    <div className="flex mb-4">
-    <div className="w-full md:w-1/5">
+    <div className="grid grid-cols-4 gap-4">
+    <div className="col-span-4 md:col-span-1">
       <SideBar />
     </div>
-  <div className="p-4">
+  <div className="col-span-4 md:col-span-3 p-3">
       <FeaturesHeader />
         <div dangerouslySetInnerHTML={{ __html: data.content }} />
   </div>

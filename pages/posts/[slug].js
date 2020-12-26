@@ -22,10 +22,11 @@ export default function Post({ post, posts, preview }) {
   }
 
   return (
-    <div className="flex mb-4">
-    <div className="w-full md:w-1/5">
+    <div className="grid grid-cols-4 gap-4">
+    <div className="col-span-4 md:col-span-1">
       <SideBar />
     </div>
+    <div className="col-span-4 md:col-span-3 p-3">
     <Layout preview={preview}>
       <Container>
         {router.isFallback ? (
@@ -61,6 +62,7 @@ export default function Post({ post, posts, preview }) {
         )}
       </Container>
     </Layout>
+    </div>
     </div>
   )
 }

@@ -3,11 +3,11 @@ import SideBar from "../components/sideBar"
 import AboutHeader from "../components/about"
 export default function RecordLibe({data, sidePage}) {
   return (
-    <div className="flex mb-4">
-    <div className="w-full md:w-1/5">
+    <div className="grid grid-cols-4 gap-4">
+    <div className="col-span-4 md:col-span-1">
     <SideBar/>
     </div>
-  <div className="p-4 w-full md:w-4/5">
+  <div className="col-span-4 md:col-span-3 p-3">
         <AboutHeader />
 
         <div dangerouslySetInnerHTML={{ __html: data.content }} />

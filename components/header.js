@@ -2,14 +2,12 @@ import Link from 'next/link'
 import TopPlayer from '../components/topPlayer'
 export default function Header(shows) {
   return (
-    <div className="flex mb-4 h-auto border-2 border-black">
-      <div className="w-full md:w-1/5">
-      <div className="pl-4 content-center">
-        <div className="text-xl">Welcome to</div>
-        <div className="text-2xl">KRLX.ORG</div>
-        </div>
+    <div className="grid grid-cols-4 gap-4">
+      <div className="col-span-4 md:col-span-1">
+        <div className="text-xl text-center">Welcome to</div>
+        <div className="text-2xl text-center">KRLX.ORG</div>
       </div>
-      <div className="w-full md:w-4/5">
+      <div className="col-span-4 md:col-span-3">
       <TopPlayer
         shows={shows}
       />

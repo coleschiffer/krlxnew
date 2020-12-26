@@ -10,11 +10,11 @@ export default function Schedule({ shows, sidePage }) {
   var d = new Date()
   var day = d.getDay()
   return (
-    <div className="flex mb-4">
-    <div className="w-full md:w-1/5">
+    <div className="grid grid-cols-4 gap-4">
+    <div className="col-span-4 md:col-span-1">
       <SideBar />
     </div>
-  <div className="w-full md:w-4/5 p-4">
+  <div className="col-span-4 md:col-span-3 p-3">
   <GetShowsByDay
     day={day}
     shows={shows}
