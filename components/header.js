@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import TopPlayer from '../components/topPlayer'
-export default function Header(shows) {
+export default function Header(shows,howler) {
   return (
     <div className="grid grid-cols-4 gap-4">
       <div className="col-span-4 md:col-span-1 p-4">
@@ -10,6 +10,7 @@ export default function Header(shows) {
       <div className="col-span-4 md:col-span-3">
     <TopPlayer
         shows={shows}
+        howlerid={howler}
       />
       </div>
     </div>
