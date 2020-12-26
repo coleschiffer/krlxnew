@@ -12,7 +12,7 @@ export default function Header(shows) {
       <div className="w-full md:w-4/5">
       <TopPlayer
         shows={shows}
-      />
+      /> this does not work yet :/
       </div>
     </div>
   )
