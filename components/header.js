@@ -1,17 +1,16 @@
 import Link from 'next/link'
-import TopPlayer from '../components/topPlayer'
-export default function Header(shows,howler) {
+import {Howl, Howler} from 'howler';
+export default function Header() {
   return (
     <div className="grid grid-cols-4 gap-4">
-      <div className="col-span-4 md:col-span-1 p-4">
+      <div className="col-span-4 md:col-span-1 p-4 h-14">
         <div className="text-xl text-center">Welcome to</div>
         <div className="text-2xl text-center">KRLX.ORG</div>
       </div>
       <div className="col-span-4 md:col-span-3">
-    <TopPlayer
-        shows={shows}
-        howlerid={howler}
-      />
+        <div className="border-2 border-black p-2 overflow-hidden vertical-align">
+        <audio src="http://stream.krlx.org:8000/_a" controls/>&nbsp;&nbsp;
+        </div>
       </div>
     </div>
   )
