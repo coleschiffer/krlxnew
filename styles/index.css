@@ -53,7 +53,16 @@
         transform: translate3d(var(--move-final), 0, 0);
     }
 }
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
 
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /* Your own custom utilities */
 
 .has-text-align-left {
