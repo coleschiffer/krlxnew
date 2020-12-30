@@ -4,12 +4,19 @@ import HeroPost from '../components/hero-post'
 import Layout from '../components/layout'
 import { getAllPostsForHome,getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
+import Head from 'next/head'
 
 export default function Blog({ allPosts: { edges }, sidePage}) {
   const heroPost = edges[0]?.node
   const morePosts = edges.slice(1)
 
   return (
+    <Container>
+    <Head>
+    <title>
+    Blog - KRLX 88.1 FM
+    </title>
+    </Head>
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
     <SideBar data={sidePage}/>
@@ -32,6 +39,7 @@ export default function Blog({ allPosts: { edges }, sidePage}) {
       </Layout>
       </div>
       </div>
+      </Container>
   )
 }
 
@@ -39,6 +47,6 @@ export async function getStaticProps({ }) {
   const sidePage = await getPageByUri("/side-bar/")
   const allPosts = await getAllPostsForHome()
   return {
-    props: { allPosts },
+    props: { allPosts,sidePage },
   }
 }

@@ -4,9 +4,17 @@ import { getShows, getPageByUri} from '../../lib/api'
 import AlphShows from '../../components/allShowsAlph'
 import FeaturesHeader from '../../components/features'
 import SideBar from "../../components/sideBar"
+import Head from 'next/head'
+import Container from '../../components/container'
 
 export default function listOfShows({ items, sidePage }) {
   return (
+    <Container>
+    <Head>
+    <title>
+    Shows - KRLX 88.1 FM
+    </title>
+    </Head>
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage} />
@@ -18,6 +26,7 @@ export default function listOfShows({ items, sidePage }) {
     />
 </div>
 </div>
+</Container>
   )
 }
 export async function getStaticProps({ params, preview = false, previewData }) {

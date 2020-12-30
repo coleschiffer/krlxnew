@@ -8,6 +8,12 @@ import ReactPlayer from 'react-player/youtube'
 export default function Index({ show,sidePage }) {
 
   return (
+    <Container>
+    <Head>
+    <title>
+    Home - KRLX 88.1 FM
+    </title>
+    </Head>
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage}/>
@@ -22,6 +28,7 @@ export default function Index({ show,sidePage }) {
 
     </div>
     </div>
+    </Container>
   )
 }
 

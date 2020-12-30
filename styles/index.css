@@ -18,6 +18,22 @@
     opacity: 0;
   }
 }
+@font-face {
+  font-family: 'Fahkwang';
+  font-weight: 400;
+  src: local('Fahkwang'), url(./fonts/Fahkwang-Regular.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Fahkwang';
+  font-weight: 300;
+  src: local('Fahkwang'), url(./fonts/Fahkwang-Light.ttf) format('ttf');
+}
+@font-face {
+  font-weight: 700;
+  font-family: 'Fahkwang';
+  src: local('Fahkwang'), url(./fonts/Fahkwang-Bold.ttf) format('ttf');
+}
+
 .marquee {
     position: relative;
     overflow: hidden;

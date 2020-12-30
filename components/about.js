@@ -18,7 +18,6 @@ export default function AboutHeader() {
       <Link as={`/record-libe`} href="/record-libe">
         <a className="underline hover:no-underline">Record Libe</a>
       </Link>
-
     </h2>
   )
 }

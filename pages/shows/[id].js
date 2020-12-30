@@ -4,6 +4,8 @@ import { getShows, getShowByID, getPersonas, getPageByUri } from '../../lib/api'
 import ShowPersonas from '../../components/showPersonas'
 import ShowTime from '../../components/showTime'
 import SideBar from "../../components/sideBar"
+import Head from 'next/head'
+import Container from '../../components/container'
 
 export default function Show({ show, allPersonas, sidePage}) {
   const router = useRouter();
@@ -11,6 +13,16 @@ export default function Show({ show, allPersonas, sidePage}) {
     return <ErrorPage statusCode={404} />
   }
   return (
+    <Container>
+    <Head>
+      <title>
+        {show?.title} - KRLX 88.1 FM
+      </title>
+      <meta
+        property="og:image"
+        content={show?.image}
+      />
+    </Head>
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage} />
@@ -33,7 +45,7 @@ export default function Show({ show, allPersonas, sidePage}) {
     />
 </div>
 </div>
-
+</Container>
   )
 }
 export async function getStaticProps({ params}) {

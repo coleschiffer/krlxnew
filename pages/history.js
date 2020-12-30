@@ -10,7 +10,7 @@ export default function About({data,sidePage}) {
     <Container>
     <Head>
     <title>
-    About - KRLX 88.1 FM
+    History - KRLX 88.1 FM
     </title>
     </Head>
     <div className="grid grid-cols-4 gap-4">
@@ -27,7 +27,7 @@ export default function About({data,sidePage}) {
 }
 
 export async function getStaticProps() {
-  const data = await getPageByUri("/about/")
+  const data = await getPageByUri("/history/")
   const sidePage = await getPageByUri("/side-bar/")
 
   return {

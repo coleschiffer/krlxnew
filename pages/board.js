@@ -1,7 +1,6 @@
 import { getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 import AboutHeader from "../components/about"
-import Header from "../components/header"
 import Head from 'next/head'
 import Container from '../components/container'
 
@@ -10,7 +9,7 @@ export default function About({data,sidePage}) {
     <Container>
     <Head>
     <title>
-    About - KRLX 88.1 FM
+    Board - KRLX 88.1 FM
     </title>
     </Head>
     <div className="grid grid-cols-4 gap-4">
@@ -27,7 +26,7 @@ export default function About({data,sidePage}) {
 }
 
 export async function getStaticProps() {
-  const data = await getPageByUri("/about/")
+  const data = await getPageByUri("/board/")
   const sidePage = await getPageByUri("/side-bar/")
 
   return {

@@ -14,6 +14,12 @@ data = data.data
         >Home</a>
       </Link>
       </div>
+      <div><Link as={`http://mc.krlx.org/`} href="http://mc.krlx.org/">
+        <a
+          className="text-2xl pt-4 underline hover:no-underline"
+        >Apply</a>
+      </Link>
+      </div>
       <div><Link as={`/schedule`} href="/schedule">
         <a
           className="text-2xl pt-4 underline hover:no-underline"
@@ -38,8 +44,6 @@ data = data.data
         >About</a>
       </Link>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: data?.content }} />
-
       <div><Link as={`https://instagram.com/krlxfm`} href="https://instagram.com/krlxfm">
         <a
           className="text-2xl pt-4 underline hover:no-underline"
@@ -53,6 +57,8 @@ data = data.data
           >Public File</a>
         </Link>
         </div>
+        <div dangerouslySetInnerHTML={{ __html: data?.content }} />
+
     </div>
   )
 }

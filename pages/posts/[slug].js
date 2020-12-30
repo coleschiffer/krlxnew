@@ -36,7 +36,7 @@ export default function Post({ post, posts, preview, sidePage}) {
             <article>
               <Head>
                 <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
+                  {post.title} - KRLX 88.1 FM
                 </title>
                 <meta
                   property="og:image"
