@@ -8,9 +8,6 @@ data = data.data
       <div className="text-3xl">KRLX 88.1 FM</div>
       <div className="text-xl">A service of <a className="underline" target="_blank" href="https://carleton.edu">Carleton College</a> <a className="underline" target="_blank" href="https://www.ci.northfield.mn.us/">Northfield, MN</a>. Call the studio at <a className="underline" target="_blank" href="tel:5072224127">507-222-4127</a> and chat with our djs  <a className="underline" target="_blank" href="#">here</a> </div>
       The time is <Clock />
-
-      <div dangerouslySetInnerHTML={{ __html: data?.content }} />
-      <br/>
       <div><Link as={`/`} href="/">
         <a
           className="text-2xl pt-4 underline hover:no-underline"
@@ -41,6 +38,8 @@ data = data.data
         >About</a>
       </Link>
       </div>
+      <div dangerouslySetInnerHTML={{ __html: data?.content }} />
+
       <div><Link as={`https://instagram.com/krlxfm`} href="https://instagram.com/krlxfm">
         <a
           className="text-2xl pt-4 underline hover:no-underline"
