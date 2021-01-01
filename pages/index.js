@@ -19,7 +19,7 @@ export default function Index({ show,sidePage }) {
       <SideBar data={sidePage}/>
     </div>
     <div className="col-span-4 md:col-span-3 p-3">
-      <ReactPlayer url='https://www.youtube.com/watch?v=VsEJ4NPP0jo' width='100%'/>
+      <ReactPlayer url='https://www.youtube.com/watch?v=n1nNRCxPzLk' width='100%'/>
       <h1>Welcome to our new website!!!! <br/>
         We are glad to have you here. <br/>
         KRLX is a special community and this is an
