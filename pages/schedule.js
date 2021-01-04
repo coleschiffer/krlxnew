@@ -22,6 +22,7 @@ export default function Schedule({ shows, sidePage }) {
       <SideBar data={sidePage}/>
     </div>
   <div className="col-span-4 md:col-span-3 p-3">
+  <div className="text-xl"> Schedule</div>
   <GetShowsByDay
     day={day}
     shows={shows}

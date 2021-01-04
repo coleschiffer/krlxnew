@@ -19,6 +19,8 @@ export default function About({data,sidePage}) {
       </div>
     <div className="col-span-4 md:col-span-3 p-3">
           <AboutHeader />
+          <div className="text-xl">{data.title}</div>
+
           <div dangerouslySetInnerHTML={{ __html: data.content }} />
         </div>
   </div>

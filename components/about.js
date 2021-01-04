@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function AboutHeader() {
   return (
-    <h2 className="text-2xl">
+    <div className="text-xl overflow-hidden vertical-align">
     <Link as={`/about`} href="/about">
           <a  className="underline hover:no-underline">About</a>
       </Link>&nbsp;&nbsp;
@@ -18,6 +18,7 @@ export default function AboutHeader() {
       <Link as={`/record-libe`} href="/record-libe">
         <a className="underline hover:no-underline">Record Libe</a>
       </Link>
-    </h2>
+      <br/>
+    </div>
   )
 }

@@ -17,7 +17,7 @@ export default function RecordLibe({data, sidePage}) {
     </div>
   <div className="col-span-4 md:col-span-3 p-3">
         <AboutHeader />
-
+        <div className="text-xl" dangerouslySetInnerHTML={{ __html: data.title }} />
         <div dangerouslySetInnerHTML={{ __html: data.content }} />
   </div>
   </div>
