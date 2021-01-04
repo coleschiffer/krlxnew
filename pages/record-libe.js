@@ -13,7 +13,7 @@ export default function RecordLibe({data, sidePage}) {
     </Head>
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
-    <SideBar/>
+    <SideBar data={sidePage} />
     </div>
   <div className="col-span-4 md:col-span-3 p-3">
         <AboutHeader />
