@@ -5,7 +5,7 @@ import CurrentShow from '../components/layout'
 import { getShows, getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 import ReactPlayer from 'react-player/youtube'
-export default function Index({ show,sidePage }) {
+export default function Index({ show,sidePage,homePage }) {
 
   return (
     <Container>
@@ -19,21 +19,20 @@ export default function Index({ show,sidePage }) {
       <SideBar data={sidePage}/>
     </div>
     <div className="col-span-4 md:col-span-3 p-3">
-      <ReactPlayer url='https://www.youtube.com/watch?v=n1nNRCxPzLk' width='100%'/>
-      <h1>Welcome to our new website!!!! <br/>
-        We are glad to have you here. <br/>
-        KRLX is a special community and this is an
-        atempt to showcase that</h1>
-        </div>
+    <div dangerouslySetInnerHTML={{ __html: homePage?.content }} />
     </div>
+    </div>
+
     </Container>
   )
 }
 
 export async function getStaticProps() {
   const sidePage = await getPageByUri("/side-bar/")
+  const homePage = await getPageByUri("/home/")
+
   const allShows = await getShows()
   return {
-    props: { show: allShows, sidePage},
+    props: { show: allShows, sidePage, homePage},
   }
 }
