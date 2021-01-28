@@ -42,6 +42,12 @@ data = data.data
         >About</a>
       </Link>
       </div>
+      <div><Link as={`/apply`} href="/about">
+        <a
+          className="text-2xl pt-4 underline hover:no-underline"
+        >Apply for the board</a>
+      </Link>
+      </div>
       <div><Link as={`https://instagram.com/krlxfm`} href="https://instagram.com/krlxfm">
         <a
           className="text-2xl pt-4 underline hover:no-underline"
