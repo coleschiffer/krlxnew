@@ -42,7 +42,7 @@ data = data.data
         >About</a>
       </Link>
       </div>
-      <div><Link as={`/apply`} href="/about">
+      <div><Link as={`/apply`} href="/apply">
         <a
           className="text-2xl pt-4 underline hover:no-underline"
         >Apply for the board</a>
