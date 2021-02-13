@@ -23,7 +23,6 @@ export default function Post({ post, posts, preview, sidePage}) {
   }
 
   return (
-    <Header/>
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage}/>
@@ -45,6 +44,8 @@ export default function Post({ post, posts, preview, sidePage}) {
                   content={post.featuredImage?.node?.sourceUrl}
                 />
               </Head>
+              <Header/>
+
               <PostHeader
                 title={post.title}
                 coverImage={post.featuredImage?.node}
