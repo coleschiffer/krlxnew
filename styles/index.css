@@ -25,7 +25,8 @@
     --move-initial: calc(-25% + var(--offset));
     --move-final: calc(-50% + var(--offset));
 }
-
+strong { font-weight: bold; }
+p {padding-bottom: 20px;}
 .marquee__inner {
     width: fit-content;
     display: flex;

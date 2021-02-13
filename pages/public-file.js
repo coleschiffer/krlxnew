@@ -2,6 +2,8 @@ import { getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 import Head from 'next/head'
 import Container from '../components/container'
+import Header from '../components/header'
+
 export default function PublicFile({data, sidePage}) {
   return (
     <Container>
@@ -10,6 +12,7 @@ export default function PublicFile({data, sidePage}) {
     Public File - KRLX 88.1 FM
     </title>
     </Head>
+    <Header />
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
     <SideBar data={sidePage}/>
