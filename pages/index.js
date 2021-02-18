@@ -21,7 +21,6 @@ export default function Index({ show,sidePage,homePage }) {
       <SideBar data={sidePage}/>
     </div>
     <div className="col-span-4 md:col-span-3 p-3">
-    <Song />
     <div dangerouslySetInnerHTML={{ __html: homePage?.content }} />
     </div>
     </div>

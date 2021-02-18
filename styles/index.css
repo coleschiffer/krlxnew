@@ -44,6 +44,10 @@ p {padding-bottom: 20px;}
 .marquee:hover .marquee__inner {
     animation-play-state: running;
 }
+.coolBg {
+  background-image: url("../public/back.png");
+  background-color: red;
+}
 
 @keyframes marquee {
     0% {
