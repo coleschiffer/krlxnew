@@ -1,15 +1,12 @@
 import Link from 'next/link'
-<<<<<<< HEAD
 import Bg from '../components/bgcolor'
-=======
->>>>>>> parent of 0f82f69 (background)
 import {Howl, Howler} from 'howler';
 export default function Header() {
   return (
     <div className="grid grid-cols-4 gap-4">
       <div className="col-span-4 md:col-span-1 p-4 h-14">
-        <div className="text-xl text-center">Welcome to</div>
-        <div className="text-2xl text-center">KRLX.ORG</div>
+    
+<Bg/>        <div className="text-2xl text-center">KRLX.ORG</div>
       </div>
       <div className="col-span-4 md:col-span-3">
         <div className="border-2 border-black p-2 overflow-hidden vertical-align">
