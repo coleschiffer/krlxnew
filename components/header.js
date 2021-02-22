@@ -20,7 +20,7 @@ export default function Header() {
           >click here</a>
         </Link> to open it in a new tab. See recently played songs <Link  as={`https://spinitron.com/krlx`} href="https://spinitron.com/krlx">  <a
             className="underline hover:no-underline"
-          >here</a></Link><br/>This website is very new and still&nbsp;
+          >here</a><Link><br/>This website is very new and still&nbsp;
         <Link as={`https://thecreativeindependent.com/people/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/`} href="https://thecreativeindependent.com/people/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/">
           <a
             className="underline hover:no-underline"
