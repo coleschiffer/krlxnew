@@ -6,6 +6,8 @@ import { getShows, getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 import Song from "../components/song"
 import ReactPlayer from 'react-player/youtube'
+import CurrentShow from '../components/currentShow'
+
 export default function Index({ show,sidePage,homePage }) {
 
   return (
@@ -21,6 +23,7 @@ export default function Index({ show,sidePage,homePage }) {
       <SideBar data={sidePage}/>
     </div>
     <div className="col-span-4 md:col-span-3 p-3">
+    <CurrentShow shows={show}/>
     <div dangerouslySetInnerHTML={{ __html: homePage?.content }} />
     </div>
     </div>
