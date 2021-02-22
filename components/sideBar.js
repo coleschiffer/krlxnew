@@ -24,6 +24,12 @@ data = data.data
         >Schedule</a>
       </Link>
       </div>
+      <div><Link as={`http://spinitron.com/krlx`} href="http://spinitron.com/krlx">
+        <a
+          className="text-2xl pt-4 underline hover:no-underline"
+        >Recent Songs</a>
+      </Link>
+      </div>
       <div><Link as={`/personas`} href="/personas">
         <a
           className="text-2xl pt-4 underline hover:no-underline"
@@ -40,12 +46,6 @@ data = data.data
         <a
           className="text-2xl pt-4 underline hover:no-underline"
         >About</a>
-      </Link>
-      </div>
-      <div><Link as={`/apply`} href="/apply">
-        <a
-          className="text-2xl pt-4 underline hover:no-underline"
-        >Apply for the board</a>
       </Link>
       </div>
       <div><Link as={`https://instagram.com/krlxfm`} href="https://instagram.com/krlxfm">
