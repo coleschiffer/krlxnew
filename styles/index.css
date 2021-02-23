@@ -18,6 +18,13 @@
     opacity: 0;
   }
 }
+.coolBg {
+  background-image: url("../public/back.png");
+  background-color: white;
+}
+
+
+
 .marquee {
     position: relative;
     overflow: hidden;
