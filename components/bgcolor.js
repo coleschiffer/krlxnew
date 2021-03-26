@@ -30,9 +30,9 @@ export default class Bg extends React.Component {
   render() {
     return (
       <div>
-        <a href="#" onClick={() => this.colorBackground()}>KRLX</a>
+        <a href="#" onClick={() => this.colorBackground()}>KRLX 88.1</a>
         {' '}
-        <a href="#" onClick={() => this.clearBackground()}>88.1 FM</a>
+        <a href="#" onClick={() => this.clearBackground()}>FM</a>
       </div>
     )
   }

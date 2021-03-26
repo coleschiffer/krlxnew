@@ -9,7 +9,6 @@ import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts, getPageByUri } from '../../lib/api'
 import PostTitle from '../../components/post-title'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
 import Tags from '../../components/tags'
 import SideBar from "../../components/sideBar"
 
