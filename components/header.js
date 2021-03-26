@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <div className="grid grid-cols-4 gap-4">
       <div className="col-span-4 md:col-span-1 p-4 h-14">
-      <div className="text-2xl text-center"><Bg/></div>
+      <div className="text-2xl text-center">Welcome To</div>
 <div className="text-2xl text-center">KRLX.ORG</div>
       </div>
       <div className="col-span-4 md:col-span-3">
@@ -15,7 +15,8 @@ export default function Header() {
           <a
             className="underline hover:no-underline"
           >click here</a>
-        </Link> to open it in a new tab. See recently played songs <br/>
+        </Link> to open it in a new tab. See recently played songs           &nbsp;
+
         <Link as={`https://spinitron.com/krlx`} href="https://spinitron.com/krlx">
           <a className="underline hover:no-underline">here.</a>
           </Link>
@@ -27,7 +28,7 @@ export default function Header() {
           >growing</a>
         </Link>
         . &nbsp;
-        <Link as={`mailto:board@krlx.org`} href="mailto:manager@krlx.org">
+        <Link as={`mailto:board@krlx.org`} href="mailto:board@krlx.org">
           <a
             className="underline hover:no-underline"
           >Email us</a>

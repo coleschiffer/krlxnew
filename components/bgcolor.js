@@ -20,7 +20,6 @@ export default class Bg extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     const { bgColored } = this.state;
     const className = 'coolBg';
-console.log(bgColored);
     if(prevState.bgColored !== bgColored){
       bgColored ?
         docBody.classList.add(className) :
@@ -31,9 +30,9 @@ console.log(bgColored);
   render() {
     return (
       <div>
-        <a href="#" onClick={() => this.colorBackground()}>Welcome</a>
+        <a href="#" onClick={() => this.colorBackground()}>KRLX</a>
         {' '}
-        <a href="#" onClick={() => this.clearBackground()}>To</a>
+        <a href="#" onClick={() => this.clearBackground()}>88.1 FM</a>
       </div>
     )
   }

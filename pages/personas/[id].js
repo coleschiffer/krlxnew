@@ -4,7 +4,6 @@ import { getPersonas, getPersonaByID, getShows,getPageByUri } from '../../lib/ap
 import Link from 'next/link'
 import PersonaShowItems from '../../components/personaShowItems'
 import SideBar from "../../components/sideBar"
-import Header from '../../components/header'
 import Container from '../../components/container'
 
 export default function Persona({ persona, allShows, sidePage }) {
@@ -14,7 +13,6 @@ export default function Persona({ persona, allShows, sidePage }) {
   }
   return (
     <Container>
-    <Header/>
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage}/>

@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Header from '../components/header'
 import Container from '../components/container'
 import Layout from '../components/layout'
 import { getShows, getPageByUri } from '../lib/api'
@@ -15,7 +14,6 @@ export default function Index({ show,sidePage,homePage }) {
     Home - KRLX 88.1 FM
     </title>
     </Head>
-    <Header />
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage}/>

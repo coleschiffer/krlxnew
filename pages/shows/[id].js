@@ -24,7 +24,6 @@ export default function Show({ show, allPersonas, sidePage}) {
         content={show?.image}
       />
     </Head>
-    <Header />
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage} />

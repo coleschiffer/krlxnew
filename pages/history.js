@@ -1,7 +1,6 @@
 import { getPageByUri } from '../lib/api'
 import SideBar from "../components/sideBar"
 import AboutHeader from "../components/about"
-import Header from "../components/header"
 import Head from 'next/head'
 import Container from '../components/container'
 
@@ -13,7 +12,6 @@ export default function About({data,sidePage}) {
     History - KRLX 88.1 FM
     </title>
     </Head>
-    <Header />
     <div className="grid grid-cols-4 gap-4">
       <div className="col-span-4 md:col-span-1">
         <SideBar data={sidePage}/>
