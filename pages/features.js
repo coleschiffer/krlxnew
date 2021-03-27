@@ -28,6 +28,11 @@ export default function Features({data}) {
 
 export async function getStaticProps() {
   const data = await getPageByUri("/contact/")
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
   return {
     props: {
     data

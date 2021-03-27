@@ -34,6 +34,11 @@ export async function getStaticProps() {
   const homePage = await getPageByUri("/home/")
 
   const allShows = await getShows()
+  if (!homePage||!sidePage||!allShows) {
+    return {
+      notFound: true,
+    }
+  }
   return {
     props: { show: allShows, sidePage, homePage},
   }

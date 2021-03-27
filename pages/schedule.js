@@ -36,7 +36,11 @@ export default function Schedule({ shows, sidePage }) {
 export async function getStaticProps({ params }) {
   const shows = await getShows()
   const sidePage = await getPageByUri("/side-bar/")
-
+  if (!shows) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     props: {
       shows,

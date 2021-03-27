@@ -29,7 +29,11 @@ export default function Contact({data, sidePage}) {
 export async function getStaticProps() {
   const data = await getPageByUri("/contact/")
   const sidePage = await getPageByUri("/side-bar/")
-
+  if (!data) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     props: {
     data,

@@ -29,7 +29,11 @@ export default function RecordLibe({data, sidePage}) {
 export async function getStaticProps() {
   const data = await getPageByUri("/record-libe/")
   const sidePage = await getPageByUri("/side-bar/")
-
+  if (!data) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     props: {
     data,

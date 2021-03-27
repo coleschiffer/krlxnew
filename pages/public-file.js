@@ -28,6 +28,11 @@ export default function PublicFile({data, sidePage}) {
 export async function getStaticProps() {
   const data = await getPageByUri("/public-file/")
   const sidePage = await getPageByUri("/side-bar/")
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
   return {
     props: {
     data,

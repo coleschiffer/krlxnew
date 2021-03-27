@@ -12,6 +12,7 @@ export default function Blog({ allPosts: { edges }, sidePage}) {
 
   return (
     <Container>
+
     <Head>
     <title>
     Blog - KRLX 88.1 FM
@@ -46,6 +47,11 @@ export default function Blog({ allPosts: { edges }, sidePage}) {
 export async function getStaticProps({ }) {
   const sidePage = await getPageByUri("/side-bar/")
   const allPosts = await getAllPostsForHome()
+  if (!sideBar||!allPosts) {
+    return {
+      notFound: true,
+    }
+  }
   return {
     props: { allPosts,sidePage },
   }

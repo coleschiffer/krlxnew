@@ -37,6 +37,11 @@ export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPersonaByID(params.id, preview, previewData)
   const sidePage = await getPageByUri("/side-bar/")
   var show = null
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
   if(data?._links.shows.length>0) {
     show = await getShows()
   }
@@ -59,6 +64,11 @@ export async function getStaticPaths() {
       statement = `/personas/${allPersonas.items[i].id}`
       personaPaths.push({ params: { id: statement} } || [])
     }
+    if (!allPersonas) {
+    return {
+      notFound: true,
+    }
+  }
   return {
     paths: personaPaths,
     fallback: true,

@@ -53,7 +53,11 @@ export async function getStaticProps({ params}) {
   const data = await getShowByID(params.id)
   const allPersonas = await getPersonas()
   const sidePage = await getPageByUri("/side-bar/")
-
+  if (!data) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     props: {
       show: data,

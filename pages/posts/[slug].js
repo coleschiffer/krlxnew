@@ -68,9 +68,20 @@ export default function Post({ post, posts, sidePage}) {
 }
 
 export async function getStaticProps({ params}) {
-  const data = await getPostAndMorePosts(params.slug)
+  if (!params.slug) {
+      return {
+        notFound: true,
+      }
+    }
+  if(params.slug) {
+    const data = await getPostAndMorePosts(params.slug)
+  }
   const sidePage = await getPageByUri("/side-bar/")
-
+  if (!data) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     props: {
       post: data.post,
@@ -82,7 +93,11 @@ export async function getStaticProps({ params}) {
 
 export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug()
-
+  if (!allPosts) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     paths: allPosts.edges.map(({ node }) => `/posts/${node.slug}`) || [],
     fallback: true,

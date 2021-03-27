@@ -26,7 +26,11 @@ export default function listOfShows({ items, sidePage }) {
 export async function getStaticProps({}) {
   const allPersonas = await getPersonas()
   const sidePage = await getPageByUri("/side-bar/")
-
+  if (!sidePage||!allPersonas) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     props: {
       items: allPersonas?.items,
