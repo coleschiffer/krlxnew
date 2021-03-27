@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # New KRLX Website
 This is our new website. It is in [Next.js](https://nextjs.org/), a React framework.
 
@@ -32,3 +33,12 @@ Press `esc` then type `:x`
 Now launch the development server
 
 `npm run dev`
+=======
+# krlxnew
+
+TODO
+- Documentation
+- Automatically Generate Pages
+- Better way of adding things to the sidebar
+- Clean up
+>>>>>>> parent of f39534f (Local)

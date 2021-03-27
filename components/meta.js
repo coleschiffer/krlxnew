@@ -3,7 +3,7 @@ Meta Tags
 */
 export default function Meta() {
   return (
-    <>
+    <Head>
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -34,9 +34,9 @@ export default function Meta() {
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
         name="description"
-        content={`Tune in. Student-run, freeform, non-commercial FM college radio station broadcasting from Northfield, Minnesota! Affiliated with Carleton College.`}
+        content={`KRLX is a student-run, freeform radio format, non-commercial FM campus radio station broadcasting from Northfield, Minnesota. Affiliated with Carleton College.`}
       />
-      <meta property="og:image" content={"https://www.content.krlx.org/wp-content/uploads/back-2.png"} />
-      </>
+      <meta property="og:image" content={"http://www.krlx.org/wp-content/uploads/2020/12/main.png"} />
+    </Head>
   )
 }

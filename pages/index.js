@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Meta from '../components/meta'
 import Container from '../components/container'
 import Layout from '../components/layout'
 import { getShows, getPageByUri } from '../lib/api'
@@ -11,7 +10,6 @@ export default function Index({ show,sidePage,homePage }) {
   return (
     <Container>
     <Head>
-    <Meta />
     <title>
     Home - KRLX 88.1 FM
     </title>
