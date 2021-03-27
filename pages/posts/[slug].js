@@ -11,6 +11,7 @@ import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import Tags from '../../components/tags'
 import SideBar from "../../components/sideBar"
+import Header from '../../components/header'
 
 export default function Post({ post, posts, sidePage}) {
   const router = useRouter()
@@ -42,6 +43,7 @@ export default function Post({ post, posts, sidePage}) {
                   content={post.featuredImage?.node?.sourceUrl}
                 />
               </Head>
+              <Header/>
 
               <PostHeader
                 title={post.title}

@@ -23,6 +23,7 @@ export default class Bg extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     const { bgColored } = this.state;
     const className = 'coolBg';
+console.log(bgColored);
     if(prevState.bgColored !== bgColored){
       bgColored ?
         docBody.classList.add(className) :

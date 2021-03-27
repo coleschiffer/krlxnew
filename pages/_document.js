@@ -4,10 +4,8 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-      <Head />
-            <body>
-            <Header />
-
+        <Head />
+        <body>
           <Main />
           <NextScript />
         </body>

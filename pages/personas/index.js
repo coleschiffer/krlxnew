@@ -4,11 +4,13 @@ import { getPersonas, getPageByUri} from '../../lib/api'
 import AlphaPersonas from '../../components/alphaPersonas'
 import FeaturesHeader from '../../components/features'
 import SideBar from "../../components/sideBar"
+import Header from '../../components/header'
 import Container from '../../components/container'
 
 export default function listOfShows({ items, sidePage }) {
   return (
     <Container>
+    <Header />
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage} />
