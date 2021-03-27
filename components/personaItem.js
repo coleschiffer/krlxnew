@@ -1,3 +1,6 @@
+/*
+DJ persona item
+*/
 import Link from 'next/link'
 export default function PersonaItem({
 name,

@@ -1,5 +1,7 @@
+/*
+More posts below an an article
+*/
 import PostPreview from '../components/post-preview'
-
 export default function MoreStories({ posts }) {
   return (
     <section>

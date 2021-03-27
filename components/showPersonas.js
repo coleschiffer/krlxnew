@@ -1,3 +1,6 @@
+/*
+Personas under a particular show
+*/
 import ShowPersona from '../components/showPersona'
 export default function ShowPersonas({
   allPersonas,

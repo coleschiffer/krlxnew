@@ -1,5 +1,5 @@
 # New KRLX Website
-This is our new website. It is in [Next.js](https://nextjs.org/), a React framework. 
+This is our new website. It is in [Next.js](https://nextjs.org/), a React framework.
 
 It generates nightly static builds from our Wordpress CMS and Spinitron. It uses wordpress graphql and the [Spinitron API](https://spinitron.github.io/v2api/).
 
@@ -32,13 +32,3 @@ Press `esc` then type `:x`
 Now launch the development server
 
 `npm run dev`
-
-
-
-TODO
-
-- Documentation
-- Automatically Generate Pages
-- Better way of adding things to the sidebar
-
-  

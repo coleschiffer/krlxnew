@@ -1,3 +1,6 @@
+/*
+Blog Post Avatars
+*/
 export default function Avatar({ author }) {
   const name = author
     ? author.firstName && author.lastName

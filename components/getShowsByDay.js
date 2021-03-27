@@ -1,3 +1,6 @@
+/*
+Sorts shows by date
+*/
 import ShowItem from '../components/showItem'
 export default function GetShowsByDay({ shows, day }) {
   const allShows = shows?.items.sort(function(a,b){

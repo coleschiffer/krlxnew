@@ -1,6 +1,9 @@
+/*
+Sort all
+*/
 import ShowItem from '../components/showItem'
-export default function AlphShows({ items }) {
-  const allShows = items.sort(
+export default function AlphShows({ allShows }) {
+  const sortedShows = allShows.sort(
   function(a, b) {
     if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
     if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
@@ -9,17 +12,17 @@ export default function AlphShows({ items }) {
 );
   return (
       <div>
-        {allShows.map((item ) =>
-          <div key={item.id}>
+        {sortedShows.map((show) =>
+          <div key={show.id}>
           <ShowItem
-            title={item?.title}
-            image={item?.image}
-            dj={item?.since}
-            id={item?.id}
-            startTime={item?.start}
-            endTime={item?.end}
-            description={item?.description}
-            oneTime={item?.one_off}
+            title={show?.title}
+            image={show?.image}
+            dj={show?.since}
+            id={show?.id}
+            startTime={show?.start}
+            endTime={show?.end}
+            description={show?.description}
+            oneTime={show?.one_off}
           />
           </div>
       )}

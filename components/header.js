@@ -1,6 +1,9 @@
+/*
+Top header bar
+
+*/
 import Link from 'next/link'
 import Bg from '../components/bgcolor'
-import {Howl, Howler} from 'howler';
 export default function Header() {
   return (
     <div className="grid grid-cols-4 gap-4">

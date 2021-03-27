@@ -1,3 +1,6 @@
+/*
+Sort posts by category
+*/
 export default function Categories({ categories }) {
   return (
     <span className="ml-1">

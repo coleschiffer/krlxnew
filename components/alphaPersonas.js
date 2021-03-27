@@ -1,3 +1,7 @@
+/*
+Sort Personas Alphabetically
+Importing Person
+*/
 import PersonaItem from '../components/personaItem'
 export default function AlphaPersonas({ items }) {
   const allPersonas = items.sort(

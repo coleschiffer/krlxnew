@@ -12,7 +12,7 @@ import Head from 'next/head'
 import Tags from '../../components/tags'
 import SideBar from "../../components/sideBar"
 
-export default function Post({ post, posts, preview, sidePage}) {
+export default function Post({ post, posts, sidePage}) {
   const router = useRouter()
   const morePosts = posts?.edges
 
@@ -26,7 +26,7 @@ export default function Post({ post, posts, preview, sidePage}) {
       <SideBar data={sidePage}/>
     </div>
     <div className="col-span-4 md:col-span-3 p-3">
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
@@ -67,13 +67,12 @@ export default function Post({ post, posts, preview, sidePage}) {
   )
 }
 
-export async function getStaticProps({ params, preview = false, previewData }) {
-  const data = await getPostAndMorePosts(params.slug, preview, previewData)
+export async function getStaticProps({ params}) {
+  const data = await getPostAndMorePosts(params.slug)
   const sidePage = await getPageByUri("/side-bar/")
 
   return {
     props: {
-      preview,
       post: data.post,
       posts: data.posts,
       sidePage,
