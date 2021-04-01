@@ -6,6 +6,7 @@ import FeaturesHeader from '../../components/features'
 import SideBar from "../../components/sideBar"
 import Header from '../../components/header'
 import Container from '../../components/container'
+import Head from 'next/head'
 
 export default function listOfShows({ items, sidePage }) {
   return (

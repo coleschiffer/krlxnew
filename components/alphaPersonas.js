@@ -1,6 +1,6 @@
 /*
-Sort Personas Alphabetically
-Importing Person
+Sort Personas alphabetically
+import Personas
 */
 import PersonaItem from '../components/personaItem'
 export default function AlphaPersonas({ items }) {

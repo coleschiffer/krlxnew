@@ -1,6 +1,3 @@
-/*
-Change Website Background Color
-*/
 if (typeof window !== 'undefined') {
   var docBody = document.querySelector('body');
 }

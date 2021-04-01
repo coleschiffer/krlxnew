@@ -1,8 +1,6 @@
-/*
-Show item formating
-*/
 import Link from 'next/link'
 import ShowTime from '../components/showTime'
+
 export default function ShowItem({
   title,
   image,

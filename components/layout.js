@@ -1,7 +1,3 @@
-
-/*
-Not really relying on this. Would be a good tool
-*/
 import Footer from '../components/footer'
 import Meta from '../components/meta'
 

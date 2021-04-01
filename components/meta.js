@@ -1,6 +1,4 @@
-/*
-Meta Tags
-*/
+
 export default function Meta() {
   return (
     <Head>

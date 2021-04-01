@@ -18,12 +18,7 @@ export default function Header() {
           <a
             className="underline hover:no-underline"
           >click here</a>
-<<<<<<< HEAD
         </Link>&nbsp; to open it in a new tab. See recently played songs&nbsp;
-=======
-        </Link> to open it in a new tab. See recently played songs           &nbsp;
-
->>>>>>> parent of f39534f (Local)
         <Link as={`https://spinitron.com/krlx`} href="https://spinitron.com/krlx">
           <a className="underline hover:no-underline">here.</a>
           </Link>

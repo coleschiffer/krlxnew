@@ -1,6 +1,3 @@
-/*
-DJs page header
-*/
 import Link from 'next/link'
 
 export default function FeaturesHeader() {

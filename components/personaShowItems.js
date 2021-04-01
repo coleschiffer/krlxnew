@@ -1,6 +1,3 @@
-/*
-Shows under personas
-*/
 import ShowItem from '../components/showItem'
 export default function PersonaShowItems({
   allShows,

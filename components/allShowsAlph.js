@@ -1,5 +1,6 @@
 /*
-Sort all
+Sort Shows alphabetically
+Importing PersonaShowItems
 */
 import ShowItem from '../components/showItem'
 export default function AlphShows({ allShows }) {

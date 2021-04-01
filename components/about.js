@@ -1,5 +1,5 @@
 /*
-About Header Bar Component
+About Header bar component
 */
 
 import Link from 'next/link'

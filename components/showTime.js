@@ -1,6 +1,3 @@
-/*
-Formating show time
-*/
 import Link from 'next/link'
 export default function ShowTime({
   startTime,

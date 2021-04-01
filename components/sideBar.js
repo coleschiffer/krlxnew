@@ -1,7 +1,3 @@
-/*
-Side bar
-*/
-
 import Clock from '../components/Clock'
 import Link from 'next/link'
 import { getPageByUri } from '../lib/api'
