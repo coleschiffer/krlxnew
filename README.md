@@ -30,7 +30,7 @@ Now launch the development server
 ## Projects
 - Show Live Songs and shows from spinitron on the site
 - Redo the homepage
--- we talked about getting a 3d picture of the studio
+- - we talked about getting a 3d picture of the studio
 - Redo the schedule page look [here](dublab.com/schedule)
 - Better incorporate a chat feature
 - Add recorded shows to the DJ page
