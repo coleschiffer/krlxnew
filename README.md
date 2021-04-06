@@ -28,12 +28,12 @@ Now launch the development server
 `npm run dev`
 
 ## Projects
-- Show Live Songs and shows from spinitron on the site
+- Live Songs and Current show from spinitron on the site
 - Redo the homepage
-- - we talked about getting a 3d picture of the studio
 - Redo the schedule page look [here](dublab.com/schedule)
 - Better incorporate a chat feature
 - Add recorded shows to the DJ page
-- work on blog formatting problems
+- Work on blog formatting problems
 - Projects page
-
+- Rebuild signage.krlx.org
+- Make content from wordpress pages and posts all responsive. See recordlibe
