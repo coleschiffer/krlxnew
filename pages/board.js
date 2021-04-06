@@ -3,7 +3,6 @@ import SideBar from "../components/sideBar"
 import AboutHeader from "../components/about"
 import Head from 'next/head'
 import Container from '../components/container'
-import Header from '../components/header'
 
 export default function About({data,sidePage}) {
   return (
@@ -13,7 +12,6 @@ export default function About({data,sidePage}) {
     Board - KRLX 88.1 FM
     </title>
     </Head>
-    <Header />
     <div className="grid grid-cols-4 gap-4">
       <div className="col-span-4 md:col-span-1">
         <SideBar data={sidePage}/>

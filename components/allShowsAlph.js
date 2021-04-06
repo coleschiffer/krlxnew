@@ -4,6 +4,9 @@ Importing PersonaShowItems
 */
 import ShowItem from '../components/showItem'
 export default function AlphShows({ allShows }) {
+  if(!allShows){
+    return "";
+  }
   const sortedShows = allShows.sort(
   function(a, b) {
     if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;

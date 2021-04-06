@@ -6,7 +6,6 @@ import FeaturesHeader from '../../components/features'
 import SideBar from "../../components/sideBar"
 import Head from 'next/head'
 import Container from '../../components/container'
-import Header from '../../components/header'
 
 export default function listOfShows({ items, sidePage }) {
   return (
@@ -16,7 +15,6 @@ export default function listOfShows({ items, sidePage }) {
     Shows - KRLX 88.1 FM
     </title>
     </Head>
-    <Header />
     <div className="grid grid-cols-4 gap-4">
     <div className="col-span-4 md:col-span-1">
       <SideBar data={sidePage} />
@@ -34,7 +32,11 @@ export default function listOfShows({ items, sidePage }) {
 export async function getStaticProps({ params, preview = false, previewData }) {
   const allShows = await getShows()
   const sidePage = await getPageByUri("/side-bar/")
-
+  if (!allShows) {
+      return {
+        notFound: true,
+      }
+    }
   return {
     props: {
       preview,

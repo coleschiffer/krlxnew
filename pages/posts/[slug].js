@@ -12,7 +12,6 @@ import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import Tags from '../../components/tags'
 import SideBar from "../../components/sideBar"
-import Header from '../../components/header'
 
 export default function Post({ post, posts, preview, sidePage}) {
   const router = useRouter()
@@ -44,8 +43,6 @@ export default function Post({ post, posts, preview, sidePage}) {
                   content={post.featuredImage?.node?.sourceUrl}
                 />
               </Head>
-              <Header/>
-
               <PostHeader
                 title={post.title}
                 coverImage={post.featuredImage?.node}
