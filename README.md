@@ -15,7 +15,7 @@ Install Dependencies:
 
 Configure local variables
 
-Create `.env.local` file in main directory. Copy `.env.local.example` and put in the Spinitron API key [here](https://spinitron.com/station/automation/panel).
+Create `.env.local` file in main directory `cp .env.local.example .env.local` and put in the Spinitron API key [here](https://spinitron.com/station/automation/panel).
 
 ```
 WORDPRESS_API_URL=https://www.content.krlx.org/graphql
@@ -28,12 +28,13 @@ Now launch the development server
 `npm run dev`
 
 ## Projects
+- Update the Board Page
 - Live Songs and Current show from spinitron on the site
 - Redo the homepage
-- Redo the schedule page look [here](dublab.com/schedule)
+- Redo the schedule page. Look [here](dublab.com/schedule)
 - Better incorporate a chat feature
 - Add recorded shows to the DJ page
 - Work on blog formatting problems
-- Projects page
+- Projects page. Look [here](dublab.com/projects)
 - Rebuild signage.krlx.org
 - Make content from wordpress pages and posts all responsive. See recordlibe
