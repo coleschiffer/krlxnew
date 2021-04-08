@@ -31,10 +31,10 @@ Now launch the development server
 - Update the Board Page
 - Live Songs and Current show from spinitron on the site
 - Redo the homepage
-- Redo the schedule page. Look [here](dublab.com/schedule)
+- Redo the schedule page. Look [here](https://dublab.com/schedule)
 - Better incorporate a chat feature
 - Add recorded shows to the DJ page
 - Work on blog formatting problems
-- Projects page. Look [here](dublab.com/projects)
-- Rebuild signage.krlx.org
+- Projects page. Look [here](https://dublab.com/projects)
+- Rebuild [signage.krlx.org](http://signage.krlx.org)
 - Make content from wordpress pages and posts all responsive. See recordlibe
